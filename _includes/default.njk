@@ -10,13 +10,18 @@
     {% endif %}
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-    <link rel="stylesheet" href="/style.css?v={% version %}"/>
+    <link rel="stylesheet" href="/style.css?v={% version %}"/><link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
     {% block head %}{% endblock %}
     <script src="/js/alpine.js?v={% version %}"></script>
   </head>
-  <body>
-    {% block content %}
-      {{ content | safe }}
-    {% endblock %}
+  <body class="antialiased">
+    <div class="">
+      {% block content %}
+        {{ content | safe }}
+      {% endblock %}
+    </div>
   </body>
 </html>
